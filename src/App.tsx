@@ -1,6 +1,6 @@
 import { connect, disconnect } from '@stacks/connect';
 import { useCallback, useState } from 'react';
-import Transfer from './components/transfer';
+import Transfer from './Transfer';
 
 
 function App() {

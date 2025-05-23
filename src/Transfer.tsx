@@ -2,9 +2,9 @@ import { request } from '@stacks/connect';
 import { broadcastTransaction, deserializeTransaction, makeUnsignedContractCall, Pc, PostConditionMode, principalCV, publicKeyToAddress, stringAsciiCV, tupleCV, uintCV, type UnsignedContractCallOptions } from "@stacks/transactions";
 import { bufferFromHex } from "@stacks/transactions/dist/cl";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { getTokenDecimals, getTokenName, getUserTokenBalance } from "../client/contract-call-read";
-import { AXELAR_CONTRACT_DEPLOYER, AXELAR_ITS_CONTRACT_IMPL, CROSS_CHAIN_FEE_STX, ITS_TOKEN_ID, NETWORK, SUI_AXELAR_CHAIN_ID, TOKEN, TOKEN_MANAGER } from "../constants";
-import { formatUnits, parseUnits } from "../units";
+import { getTokenDecimals, getTokenName, getUserTokenBalance } from "./client/contract-call-read";
+import { AXELAR_CONTRACT_DEPLOYER, AXELAR_ITS_CONTRACT_IMPL, CROSS_CHAIN_FEE_STX, ITS_TOKEN_ID, NETWORK, SUI_AXELAR_CHAIN_ID, TOKEN, TOKEN_MANAGER } from "./constants";
+import { formatUnits, parseUnits } from "./units";
 
 
 const Transfer = ({ pubkey }: { pubkey: string }) => {
