@@ -18,6 +18,8 @@ const Transfer = ({ pubkey }: { pubkey: string }) => {
     const [progress, setProgress] = useState(false);
     const [txid, setTxid] = useState('');
 
+    console.log(name)
+
     const address = useMemo(() => publicKeyToAddress(pubkey, NETWORK), [pubkey]);
     const formatted = useMemo(() => formatUnits(balance, decimals), [balance, decimals]);
 
@@ -92,7 +94,7 @@ const Transfer = ({ pubkey }: { pubkey: string }) => {
             ],
             postConditions: [
                 Pc.principal(address).willSendEq(CROSS_CHAIN_FEE_STX).ustx(),
-                Pc.principal(address).willSendEq(parsed).ft(TOKEN, name),
+                Pc.principal(address).willSendEq(parsed).ft(TOKEN, TOKEN.split(".")[1]),
             ],
             postConditionMode: PostConditionMode.Deny,
             network: NETWORK,
