@@ -13,3 +13,9 @@
 - Leather wallet: https://leather.io/
 - Stacks explorer: https://explorer.hiro.so/?chain=testnet
 - Testnet faucet: https://explorer.hiro.so/sandbox/faucet?chain=testnet
+
+## Installation
+
+> npm install
+
+> npm run dev
